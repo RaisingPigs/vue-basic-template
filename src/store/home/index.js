@@ -15,6 +15,8 @@ const actions = {
         let res = await reqUserList();
         if (res.code === 200) {
             commit('GET_USER_LIST', res.data.userList);
+        } else {
+            return Promise.reject(new Error(res.msg));
         }
     }
 }

@@ -30,8 +30,13 @@ export default {
         ...mapGetters('home', ['firstUser'])
     },
     methods: {
-        getUserList() {
-            this.$store.dispatch('home/getUserList');
+        async getUserList() {
+            try {
+                await this.$store.dispatch('home/getUserList');
+                this.$toast('获取用户列表成功');
+            } catch (e) {
+                this.$toast('获取用户列表失败');
+            }
         }
     },
 }
