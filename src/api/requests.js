@@ -3,7 +3,7 @@ import nprogress from 'nprogress';
 import 'nprogress/nprogress.css'
 
 const requests = axios.create({
-    baseURL: 'http://wwww.pandemo.top:8001',
+    baseURL: 'http://www.pandemo.top:8001',
     timeout: '5000'
 });
 
